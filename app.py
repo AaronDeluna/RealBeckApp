@@ -10,7 +10,7 @@ import re
 
 app = Flask(__name__)
 CORS(app, resources={r"/e-mail-api": {"origins": "*"}, r"/users": {"origins": "*"}, r"/user/*": {"origins": "*"}, r"/submit_form/*": {"origins": "*"},}, methods=["OPTIONS", "POST", "GET", "DELETE"])
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:halw8301@localhost:5432/postgres'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://myuser:mypassword@localhost:5432/mydatabase'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
